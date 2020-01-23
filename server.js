@@ -11,8 +11,8 @@ app.use(express.json());
 
 var handlebar = require("express-handlebars");
 
-app.engine("handlebars", handlebar({defaultLayout: "main"}));
-app.search("view engine", "handlebars");
+app.engine("handlebars", handlebar({ defaultLayout: "main"}));
+app.set("view engine", "handlebars");
 
 var routes = require("./controllers/burgCon.js");
 
